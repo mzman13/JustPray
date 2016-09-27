@@ -1,0 +1,23 @@
+body{
+	font-size: 24px;
+	background-color: Gainsboro;
+	font-family: Arial;
+
+}
+div.header{
+	
+}
+h1.title{{
+	color: SlateGray;
+	
+}
+div.featured{
+	background-color:SlateGray;
+	color: white;
+	
+}
+nav ul{
+	list-style: none;
+	padding: 0;
+	
+}
