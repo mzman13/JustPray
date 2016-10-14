@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"
->	<title>Michael Zheng 1550 Project 1</title>
+	<meta charset="utf-8">
+	<title>Michael Zheng 1550 Project 1</title>
 	<link rel="stylesheet" href="./css/home.css">
-	<script src="./js/form.js"></script>
 </head>
 
 <body>
@@ -12,9 +11,11 @@
 		<div id="logo">
 			<h2>JustPray</h2>
 		</div>
+
 		<div id="search">
 			<input type="text" name="search" placeholder="Search...">
 		</div>
+		
 		<div id="loginButton">
 			<button onclick="displayMenu()">LOGIN</button>
 		</div>
@@ -24,9 +25,9 @@
 			<span onclick="hideMenu()" class="close" title="Close Modal">&times;</span>
 
 			<!--Container Content-->
-			<form class="modal-content animate" name="loginForm" action="" method="post" onsubmit="return checkInputs();">
+			<form class="modal-content animate" name="loginForm" action="" method="get" onsubmit="return checkInputs();">
 				<div class="imgcontainer">
-					<img src="img/acf_profile.jpg" alt="Profile" class="profile">
+					<img src="./img/acf_profile.jpg" alt="Profile" class="profile">
 					<h3>Login to Just Pray or Create an account</h3>
 				</div>
 
@@ -47,22 +48,20 @@
 
 	<div class="mainQuote">
 		<p>Verse of the Day</p>
-		<p> some random text here</p>
 		<?php
-			// $fileContents = file("verses.txt");
-			// $line = $fileContents[rand(0, count($fileContents)-1)];
-			// print $line;
-			// print "Hello world";
+			$fileContents = file("verses.txt");
+			$line = $fileContents[rand(0, count($fileContents)-1)];
+			print $line;
 		?>
 	</div>
 
 	<nav>
 		<ul>
-			<li><a class="home" href="">HOME</a></li>
+			<li><a class="home" href="index.php">HOME</a></li>
 			<li><a class="recent" href="">RECENT</a></li>
 			<li><a class="popular" href="">POPULAR</a></li>
 			<li><a class="archive" href="">ARCHIVE</a></li>
-			<li><a class="contact" href="">CONTACT US</a></li>
+			<li><a class="contact" href="contact/contact.php">CONTACT US</a></li>
 		</ul>
 	</nav>
 
@@ -111,8 +110,11 @@
 	</div>
 
 	<div class="footer">
-		<h1>JustPray</h1>
+		<?php
+			include 'footer.php';
+		?>
 	</div>
 
+	<script src="./js/form.js"></script>
 </body>
 </html>

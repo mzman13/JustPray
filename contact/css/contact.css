@@ -165,19 +165,18 @@ img.profile{
 	to {transform: scale(1)}
 }
 
-div.mainQuote{
+div.mainTitle{
 	background-color: black;
 	height: 350px;
 	padding: 20px 50px 0 50px;
 	color: white;
-	text-align: left;
-	font-size: 40px;
-	line-height: 50px;
-	font-weight: 700;
 }
 
-p:nth-child(3){
-	padding-left: 40%;
+div.mainTitle h1{
+	text-align: center;
+	font-size: 60px;
+	line-height: 350px;
+	font-weight: 700;
 }
 
 nav ul{
@@ -230,55 +229,36 @@ a.contact:hover{
 	background: -webkit-gradient(radial, 116.727 23, 0, 116.727 23, 300, from(rgb(197, 45, 73)), to(rgb(225, 144, 81))) rgb(225, 144, 81);
 }
 
-.postsContainer{
-	box-sizing: border box;
+.contactContainer{
+	/*display: flex;
+	justify-content: space-around;*/
+	margin-top: 50px;
+	padding: 0 15%;
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
-	margin: 50px 0 0 0;
-	padding: 0 18%;
 }
 
-.post{
-	width: 30%;
-	min-height: 210px;
-	margin: 0;
-	box-sizing: border-box;
-	padding: 0 20px;
-	position: relative;
-}
-
-.postBox{
-	width: 100%;
-	display: block;
-	margin: 0 0 25px;
-	text-decoration: none;
-	box-sizing: border-box;
-}
-
-.postBox>figure{
-	display: block;
-	margin: 0;
-}
-
-.postBox>figure>img{
-	width: 100%;
-	vertical-align: middle;
-	border: 0;
-	max-height: 325px;
-	border-radius: 5px 5px 0 0;
-}
-
-.postBox>p{
-	min-height: 50px;
+input#name, input#email{
 	font-size: 20px;
-	font-weight: 800;
-	line-height: 1.5em;
-	padding: 40px 15px;
-	margin: 0;
-	background: white;
-	color: black;
-	text-align: center;
-	box-sizing: border-box;
+	border: 1px solid #ccc;
+	width: 43%;
+	padding: 20px 10px;
+	margin-right: 5%;
+	border-radius: 4px;
+}
+
+input#message{
+	font-size: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 95%;
+	padding: 10px 10px 300px 10px;
+	margin: 40px 5% 0 0;
+}
+
+.contactContainer button{
+	margin-top: 40px;
 }
 
 .footer{
