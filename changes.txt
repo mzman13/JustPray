@@ -1,0 +1,3 @@
+In part 2 of the project, the biggest change I made was the overall display of the website. I figured I'd go for a hybrid one page view website, but with other links still. I added a database to include all the prayers
+that are posted. Anybody is able to type a prayer and view it in the archives. In the archives, I used Ajax to connect to a php file so people have the option to see which prayer posts are the oldest. Unfortunately, I did not
+get to enabling the save feature. I fixed the overall display of the contact page by incorporating flex rather using paddings and margins.
