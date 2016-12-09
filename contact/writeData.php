@@ -11,8 +11,12 @@
 		$email = filter_input(INPUT_POST, "email");
 		$message = filter_input(INPUT_POST, "message");
 
-		$data = $name . "\n" . $email . "\n" . $message . "\n";
-		file_put_contents('data.txt', $data, FILE_APPEND | LOCK_EX);
+		$data = "Name: ".$name . "\nEmail: " . $email . "\nMessage: " . $message . "\n";
+		//file_put_contents('data.txt', $data, FILE_APPEND | LOCK_EX);
+		$to = "mzman13@gmail.com";
+		$subject = "New Message from JustPray Visitor $name";
+		$header = "From: $email\n";
+		mail($to, $subject, $data, $header);
 
 		header("Location: contact.php");
 	?>

@@ -2,60 +2,144 @@ body{
 	background-color: white;
 	color: black;
 	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 div.header{
-	background-color: white;
-	height: 80px;
-	padding-top: 10px;
+	background-image: url("../img/home3.jpg");
+	background-size: 100% 100%;
 }
 
 #logo{
-	float: left;
-	margin: 10px 0 0 19%;
+	padding-top: 15px;
+	height: 80px;
+	text-align: center;
+	color: white;
 }
 
-#logo h2{
+#logo h1{
 	margin: 0;
-	font-size: 24px;
+	font-size: 48px;
+	font-weight: bolder;
 }
 
-#search{
-	position: absolute;
-	box-sizing: border-box;
-	margin: 5px 0 0 25%;
-	float: left;
+div.mainQuote{
+	/*background-color: black;*/
+	height: 560px;
+	width: 100%;
+	display: block;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	line-height: 200%;
+	font-weight: 700;
+	padding-top: 100px;
 }
 
-#search input{
-	width: 70px;
-	border-radius: 5px;
-	font-size: 16px;
-	padding: 7px 10px;
+div.mainAbout{
+	display: block;
+	height: 500px;
+	text-align: center;
+	padding: 50px 250px 0 250px;
 	margin: 0;
-	transition: width 0.4s ease-in-out;
-	border: 3px solid #ccc;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 150%;
+	color: white;
+	background-image: url("../img/home6.jpg");
+	background-size: cover;
+	filter: brightness(90%);
 }
 
-#search input:focus{
-	width: 400px;
-}
+/*NAVBAR CSS*/
 
-#loginButton{
-	margin-right: 26%;
-	float: right;
-}
-
-#loginButton button{	
-	width: auto;
+nav{
 	height: 40px;
-	padding: 0 40px 0 40px;
-	margin-top: 5px;
-	background-color: black;
+	
 }
 
-#loginButton button:hover{
-	background-color: grey;
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;	
+}
+
+nav ul li{
+	float: left;
+	/*border: 0.5px solid grey;*/
+	width: 20%;
+}
+
+nav ul li >a{
+	color: white;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	line-height: 40px;
+	transition: background 1s;
+}
+
+nav ul li a >img{
+	width: 20px;
+	height: 20px;
+}
+
+nav ul li button{	
+	padding: 0;
+}
+
+li button:hover{
+	background-color: white;
+}
+
+nav ul li button img{
+	width: 20px;
+	height: 20px;
+}
+
+.fixed{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	background-color: black;
+	transition: background .5s linear;
+}
+
+a.home:hover{
+	background: -webkit-gradient(radial, 249 23, 0, 249 23, 300, from(rgb(197, 45, 73)), to(rgb(138, 59, 211))) rgb(138, 59, 211);
+}
+
+a.prayer:hover{
+	background: -webkit-gradient(radial, 249 23, 0, 249 23, 300, from(rgb(197, 45, 73)), to(rgb(138, 59, 211))) rgb(138, 59, 211);
+}
+
+a.blogs:hover{
+	background: -webkit-gradient(radial, 8.18182 23, 0, 8.18182 23, 300, from(rgb(68, 230, 163)), to(rgb(68, 200, 230))) rgb(68, 200, 230);
+}
+
+a.archive:hover{
+	background: -webkit-gradient(radial, 154.364 23, 0, 154.364 23, 300, from(rgb(227, 208, 132)), to(rgb(175, 115, 42))) rgb(175, 115, 42);
+}
+
+a.about:hover{
+	background: -webkit-gradient(radial, 78.5455 23, 0, 78.5455 23, 300, from(rgb(105, 93, 175)), to(rgb(90, 174, 202))) rgb(90, 174, 202);
+}
+
+a.contact:hover{
+	background: -webkit-gradient(radial, 116.727 23, 0, 116.727 23, 300, from(rgb(197, 45, 73)), to(rgb(225, 144, 81))) rgb(225, 144, 81);
+}
+
+#hoverAnimate{
+	transition: all 1s;
+}
+
+#hoverAnimate:hover{
+	background-color: black;
 }
 
 button{
@@ -76,215 +160,189 @@ button:hover{
 	background-color: SteelBlue;
 }
 
-.modal{
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
+/*PRAYER CSS*/
+.prayerTitle{
+	height: 400px;
 	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0,0.9);
-	padding-top: 60px;
-}
-
-.modal-content{
-	background-color: black;
-	margin: 5% auto 15% auto;
-	width: 30%;
-}
-
-.imgcontainer{
+	display: block;
+	color: white;
 	text-align: center;
-	margin: 24px 0 12px 0;;
-	position: relative;
-	background-color: black;
-	color: white;
-}
-
-img.profile{
-	width: 40%;
-	border-radius: 50%;
-}
-
-.container{
-	padding: 16px;
-	background-color: black;
-}
-
-.container p{
-	font-size: 18px;
-	font-style: italic;
-	text-align: center;
-	color: white;
-}
-
-.container a{
-	color: SteelBlue;
-}
-
-#uname, #pword{
-	width: 100%;
-	padding: 20px 20px;
-	margin: 8px auto;
-	display: inline-block;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	font-size: 20px;
-	border-radius: 5px;
-}
-
-.close{
-	position: absolute;
-	right: 25px;
-	top: 0;
-	color: white;
-	font-size: 60px;
-	font-weight: bold;
-}
-
-.close:hover, .close:focus{
-	color: red;
-	cursor: pointer;
-}
-
-.animate{
-	-webkit-animation: animatezoom 0.6s;
-	animation: animatezoom 0.6s;
-}
-
-@-webkit-keyframes animatezoom{
-	from {-webkit-transform: scale(0)}
-	to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom{
-	from {transform: scale(0)}
-	to {transform: scale(1)}
-}
-
-div.mainQuote{
-	background-color: black;
-	height: 350px;
-	padding: 20px 50px 0 50px;
-	color: white;
-	text-align: left;
 	font-size: 40px;
-	line-height: 50px;
+	line-height: 150px;
 	font-weight: 700;
 }
 
-p:nth-child(3){
-	padding-left: 40%;
+
+/*ARCHIVE CSS*/
+.archiveTitle{
+	height: 300px;
+	width: 100%;
+	display: block;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	line-height: 150px;
+	font-weight: 700;
 }
 
-nav ul{
-	list-style: none;
+.archiveContent{
+	margin-top: 20px;
+	padding: 0 15% 0 25%;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-flow: row wrap;
+	align-content: space-between;
+}
+
+.archiveContent div{
+	width: 48%;
+	font-size: 16px;
+	font-weight: 600;
+	padding-top: 20px;
+}
+
+.archiveContent img{
+	height: 20px;
+	width: 45px;
+}
+
+.saveButtonDiv{
 	margin: 0;
 	padding: 0;
-	background-color: black;
-	overflow: hidden;
+	text-align: right;
 }
 
-nav ul li{
-	float: left;
-	border: 1px solid grey;
-	width: 19.8%;
-}
-
-nav ul li >a{
-	color: white;
-	font-size: 15px;
-	font-weight: 700;
+.saveButton{
+	background-color: white;
+	color: SteelBlue;
+	padding: 5px 10px;
+	margin: 0;
+	border: none;
+	cursor: pointer;
+	width: 60px;
+	font-size: 12px;
+	font-weight: 600;
 	text-align: center;
+	border-radius: 5px;
+	border: 1px solid SteelBlue;
+}
+
+.saveButton:hover{
+	background-color: SteelBlue;
+	color: white;
+}
+
+.sortButtonDiv{
+	text-align: center;
+}
+
+.sortButton{
+	background-color: white;
+	color: black;
+	padding: 14px 20px;
+	margin-right: 20px;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+	font-size: 24px;
+	border-radius: 5px;
+	font-weight: 600;
+}
+
+/*ABOUT US CSS*/
+div.aboutTitle{
+	/*background-color: black;*/
+	height: 500px;
+	width: 100%;
 	display: block;
-	text-decoration: none;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	line-height: 200%;
+	font-weight: 700;
+	padding-top: 75px;
+}
+
+.aboutTitle > h1{
+	margin: 0;
+}
+
+.aboutContent{
+	padding: 20px 100px;
+	margin: 0;
+	font-size: 24px;
+	text-align: center;
+}
+
+/*CONTACT PAGE CSS*/
+div.contactTitle{
+	/*background-color: black;*/
+	height: 400px;
+	width: 100%;
+	display: block;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	line-height: 200px;
+	font-weight: 700;
+}
+
+.formTitle{
+	text-align: center;
+	color: SteelBlue;	
+}
+
+.contactContainer{
+	margin-top: 50px;
+	padding: 0 15%;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-flow: row wrap;
+	align-content: space-between;
+}
+
+.contactContainer > div{
+	width: 45%;
+}
+
+.contactContainer >div.message{
+	width: 100%;
+}
+
+input#name, input#email{
+	font-size: 20px;
+	border: 1px solid #ccc;
+	width: 100%;
 	padding: 20px 0;
-	transition: background 1s;
-	-webkit-transition: background 1s;
+	border-radius: 4px;
 }
 
-nav ul li:last-child{
-	border-right: none;
+input#message{
+	font-size: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 100%;
+	height: 100px;
+	padding: 10px 0;
+	margin-top: 40px;
 }
 
-a.home:hover{
-	background: -webkit-gradient(radial, 249 23, 0, 249 23, 300, from(rgb(197, 45, 73)), to(rgb(138, 59, 211))) rgb(138, 59, 211);
-}
-
-a.recent:hover{
-	background: -webkit-gradient(radial, 8.18182 23, 0, 8.18182 23, 300, from(rgb(68, 230, 163)), to(rgb(68, 200, 230))) rgb(68, 200, 230);
-}
-
-a.popular:hover{
-	background: -webkit-gradient(radial, 154.364 23, 0, 154.364 23, 300, from(rgb(227, 208, 132)), to(rgb(175, 115, 42))) rgb(175, 115, 42);
-}
-
-a.archive:hover{
-	background: -webkit-gradient(radial, 78.5455 23, 0, 78.5455 23, 300, from(rgb(105, 93, 175)), to(rgb(90, 174, 202))) rgb(90, 174, 202);
-}
-
-a.contact:hover{
-	background: -webkit-gradient(radial, 116.727 23, 0, 116.727 23, 300, from(rgb(197, 45, 73)), to(rgb(225, 144, 81))) rgb(225, 144, 81);
+.contactContainer button{
+	margin: 40px 0;
 }
 
 .postsContainer{
-	box-sizing: border box;
-	display: flex;
-	flex-wrap: wrap;
-	margin: 50px 0 0 0;
-	padding: 0 18%;
-}
-
-.post{
-	width: 30%;
-	min-height: 210px;
-	margin: 0;
-	box-sizing: border-box;
-	padding: 0 20px;
-	position: relative;
-}
-
-.postBox{
-	width: 100%;
-	display: block;
-	margin: 0 0 25px;
-	text-decoration: none;
-	box-sizing: border-box;
-}
-
-.postBox>figure{
-	display: block;
-	margin: 0;
-}
-
-.postBox>figure>img{
-	width: 100%;
-	vertical-align: middle;
-	border: 0;
-	max-height: 325px;
-	border-radius: 5px 5px 0 0;
-}
-
-.postBox>p{
-	min-height: 50px;
-	font-size: 20px;
-	font-weight: 800;
-	line-height: 1.5em;
-	padding: 40px 15px;
-	margin: 0;
-	background: white;
-	color: black;
 	text-align: center;
-	box-sizing: border-box;
 }
+
+/*FOOTER CSS*/
 
 .footer{
+	display: block;
 	background-color: black;
 	color: white;
 	text-align: center;
-	height: 150px;
-	line-height: 150px;
+	height: 100px;
+	line-height: 100px;
+	margin: 0;
 }

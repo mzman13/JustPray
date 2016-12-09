@@ -8,7 +8,12 @@
 
 <body>
 	<?php
-			print "<h1>JustPray</h1>";
+		print <<<HERE
+		<div class="footer">
+			<h1>JustPray</h1>
+			
+		</div>
+HERE;
 	?>
 </body>
 </html>

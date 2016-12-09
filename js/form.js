@@ -22,6 +22,10 @@ function hideMenu(){
 	document.getElementById("loginMenu").style.display = "none";
 }
 
+function returnBack(){
+	alert("Thank you for your input!");
+}
+
 window.onclick = function(event){
 	modal = document.getElementById("loginMenu");
 
@@ -29,3 +33,15 @@ window.onclick = function(event){
 		modal.style.display = "none";
 	}
 }
+
+$(document).ready(function(){
+	$(window).bind('scroll', function(){
+		//var navHeight = $(window).height() - 140;
+		var navHeight = 135;
+		if($(window).scrollTop() > navHeight){
+			$('nav').addClass('fixed');
+		} else{
+			$('nav').removeClass('fixed');
+		}
+	});
+});
